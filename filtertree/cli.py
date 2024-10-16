@@ -21,7 +21,9 @@ def main():
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Apply filter to directory tree."
+    )
     parser.add_argument(
         "src_dir",
         metavar="SRCDIR",
