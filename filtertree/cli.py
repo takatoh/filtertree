@@ -17,7 +17,6 @@ def main():
             dest_file_path = dest_dir.joinpath(src_file_path.relative_to(src_dir))
             dest_file_path.parent.mkdir(parents=True, exist_ok=True)
             cmd = f"echo {str(src_file_path)} {str(dest_file_path)}"
-            #print(cmd)
             subprocess.call(cmd, shell=True)
 
 
