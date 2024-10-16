@@ -9,7 +9,7 @@ def main():
 
 
 def echo(src_file_path, dest_file_path):
-    cmd = f"echo {str(src_file_path)} {str(dest_file_path)}"
+    cmd = f"echo FROM {str(src_file_path)} TO {str(dest_file_path)}"
     subprocess.call(cmd, shell=True)
 
 
