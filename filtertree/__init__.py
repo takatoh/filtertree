@@ -11,6 +11,6 @@ def filtertree(func, src_dir, dest_dir):
         current = Path(cur_dir)
         for file in files:
             src_file_path = current / file
-            dest_file_path = dest_dir.joinpath(src_file_path.relative_to(src_dir))
+            dest_file_path = dest_dir / src_file_path.relative_to(src_dir)
             dest_file_path.parent.mkdir(parents=True, exist_ok=True)
             func(src_file_path, dest_file_path)
