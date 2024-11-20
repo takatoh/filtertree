@@ -5,7 +5,13 @@ import argparse
 
 def main():
     args = parse_arguments()
-    if args.cmd:
+    if args.script:
+        def cmdfunc(src_file_path, dest_file_path):
+            src = str(src_file_path)
+            dest = str(dest_file_path)
+            oneliner = args.script.replace("$1", src).replace("$2", dest)
+            subprocess.call(oneliner, shell=True)
+    elif args.cmd:
         def cmdfunc(src_file_path, dest_file_path):
             subprocess.call(f"{args.cmd} {src_file_path} {dest_file_path}", shell=True)
     else:
@@ -47,6 +53,13 @@ def parse_arguments():
         action="version",
         version=f"v{__version__}",
         help="show version and exit"
+    )
+    parser.add_argument(
+        "-c",
+        metavar="SCRIPT",
+        action="store",
+        dest="script",
+        help="one line script"
     )
     args = parser.parse_args()
     return args
