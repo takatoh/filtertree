@@ -28,15 +28,18 @@ Arguments are:
 
 `filtertree` function applies `func` to each file under `src_dir_path` directory tree and the same location under `dest_dir_path`.
 
-
 ### CLI tool `filtre`
 
 `filtre` applies command to `src_dir` directory tree as follows:
 
-    $ filtre src_dir dest_dir copy
+    $ filtre src_dir dest_dir cp
 
 Or you can give one-line-script with `-c` option.
 
     $ filtre -c "copy $1 $2" src_dir dest_dir
 
 `$1` and `$2` in one-lien-script are replaced by src and dest file paths.
+
+## License
+
+MIT license.
