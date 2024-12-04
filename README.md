@@ -36,7 +36,7 @@ Arguments are:
 
 Or you can give one-line-script with `-c` option.
 
-    $ filtre -c "copy $1 $2" src_dir dest_dir
+    $ filtre -c "cp $1 $2" src_dir dest_dir
 
 `$1` and `$2` in one-lien-script are replaced by src and dest file paths.
 
