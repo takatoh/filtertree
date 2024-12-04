@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "filtertree"
 version = "0.1.0"
-description = "Filter directory tree"
+description = "Apply a filter to the directory tree"
 authors = ["takatoh <takatoh.m@gmail.com>"]
 readme = "README.md"
 license = "MIT"
