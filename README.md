@@ -10,8 +10,6 @@ filtertree can be installed with pip:
 
 ## Usage
 
-### Module function
-
 filtertree module provides a function `filtertree`.
 
 ```python
@@ -28,7 +26,7 @@ Arguments are:
 
 `filtertree` function applies `func` to each file under `src_dir_path` directory tree and the same location under `dest_dir_path`.
 
-### CLI tool `filtre`
+## CLI tool `filtre`
 
 `filtre` applies command to `src_dir` directory tree as follows:
 
