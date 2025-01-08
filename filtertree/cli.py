@@ -16,7 +16,7 @@ def main():
             subprocess.call(f"{args.cmd} {src_file_path} {dest_file_path}", shell=True)
     else:
         cmdfunc = _echo
-    filtertree(cmdfunc, args.src_dir, args.dest_dir)
+    filtertree(cmdfunc, args.src_dir, args.dest_dir, overwrite=args.overwrite)
 
 
 def _echo(src_file_path, dest_file_path):
@@ -60,6 +60,11 @@ def parse_arguments():
         action="store",
         dest="script",
         help="one line script"
+    )
+    parser.add_argument(
+        "-o", "--overwrite",
+        action="store_true",
+        help="overwrite destination files"
     )
     args = parser.parse_args()
     return args
