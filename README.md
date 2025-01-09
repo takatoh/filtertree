@@ -41,7 +41,7 @@ Or you can give one-line-script with `-c` option.
 
 `$1` and `$2` in one-lien-script are replaced by src and dest file paths.
 
-If `-o` / `--overwite` option is passed, overwrite the destination files. Otherwise, skip.
+If `-o` / `--overwrite` option is passed, overwrite the destination files. Otherwise, skip.
 
 ## License
 
