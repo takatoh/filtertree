@@ -23,11 +23,11 @@ Arguments are:
 - `func` is a filter function that takes 2 arguments, source and destination file paths.
 - `src_dir_path` is a base directory path for source.
 - `dest_dir_path` is a base directory path for destination.
-- `overwrite` is a flag to overwrite destination files.
+- `overwrite` is a flag to overwrite destination files. Default to `False`.
 
 `filtertree` function applies `func` to each file under `src_dir_path` directory tree and the same location under `dest_dir_path`.
 
-If `overwrite` is `True`, overwrite the destination files, Or not. Default to `False`.
+If `overwrite` is `True`, overwrite the destination files, Or not.
 
 ## CLI tool `filtre`
 
@@ -45,4 +45,4 @@ If `-o` / `--overwrite` option is passed, overwrite the destination files. Other
 
 ## License
 
-MIT license.
+MIT License.
